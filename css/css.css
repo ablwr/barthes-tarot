@@ -20,6 +20,7 @@ h1 {
 
 #displayCanvas {
   border: solid #09161f 2px;
+  border-radius: 18px;
 }
 
 .btn {
