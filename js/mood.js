@@ -53,7 +53,7 @@ function canvasApp() {
     var x0, y0, w, h;
     var numRects = 12;
     var alphaVariation;
-    var angleVariation = Math.PI/32;
+    var angleVariation = Math.PI/22;
     var r,g,b,baseAlpha;
     var gradRad;
     var xMid,yMid;
@@ -106,8 +106,8 @@ function canvasApp() {
     var alpha;
     var zeroAlpha = 0.5/255;    
     var angle = (1 - 2*Math.random())*angleVariation;
-    var xm = 0.5*(x0 + x1);
-    var ym = 0.5*(y0 + y1);
+    var xm = 0.55*(x0 + x1);
+    var ym = 0.55*(y0 + y1);
     var ux = x0 - xm;
     var uy = y0 - ym;
     var sinAngle = Math.sin(angle);
