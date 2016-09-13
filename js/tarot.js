@@ -40,7 +40,7 @@ var tarots = [
   ["'Special Days'", "fête", "The amorous subject experiences every meeting with the loved being as a festival. "],
   ["'I am crazy'", "fou", "It frequently occurs to the amorous subject that they is or is going mad."],
   ["'Looking embarrassed'", "gêne", "A group scene in which the implicit nature of the amorous relation functions as a constraint and provokes a collective embarrassment which is not spoken."],
-  ["Gradiva", "Gradiva", "This name, borrowed from Jensen's book analyzed by Freud, designates the image of the loved being insofar as that being agrees to enter to some degree into the amorous subject's delirium in order to theylp them escape from it."],
+  ["Gradiva", "Gradiva", "This name, borrowed from Jensen's book analyzed by Freud, designates the image of the loved being insofar as that being agrees to enter to some degree into the amorous subject's delirium in order to help them escape from it."],
   ["Blue Coat and Yellow Vest", "habit", "Any affect provoked or sustained by the clothing which the subject has worn during the amorous encounter, or wears with the intention of seducing the loved object."],
   ["Identifications", "identification", "The subject painfully identifies themself with some person (or character) who occupies the same position as themself in the amorous structure."],
   ["Images", "image", "In the amorous realm, the most painful wounds are inflicted more often by what one sees than by what one knows"],
