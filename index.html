@@ -1,46 +1,35 @@
 <!doctype html>
 <html lang="en">
-
-  <head>  
+  <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="ball.jpg" type="image/x-icon">
   <title>Barthes Tarot</title>
-  <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+  <link type="text/css" href="css/css.css" rel="stylesheet" />
+  </head>
+  <body>
+    <section id="main">
+        <a href=""><span class="avatar"><img src="ball.jpg"></span></a>
+        <a href=""><h1>Barthes Tarot</h1></a>
+        <div id="intro">
+        <p>The necessity for this book is to be found in the following consideration:
+        that the lover's discourse is today of <emphasis>an extreme solitude</emphasis>.</p>
+        </div>
+        <p><a class="btn" id="button">get a reading</a></p>
+        <canvas id="displayCanvas" style='display:none;' width="278em" height="148em">
+          Your browser does not support HTML5 canvas.
+        </canvas>
+        <div id="caption" style='display:none;'>
+          <h1 id="caption_title"></h1>
+          <p id="caption_def"></p>
+          <a class="btn again" href="">again</a>
+        </div>
+    </section>
+    <footer id="footer">
+      <span class="copyleft">&copy;</span> <a href="https://github.com/ablwr">ablwr</a> | thx <a href="http://www.goodreads.com/book/show/380994.A_Lover_s_Discourse">Roland Barthes</a>.
+    </footer>
+  </body>
   <script src="js/modernizr-2.0.6.js"></script>
   <script src="js/mood.js"></script>
   <script src="js/tarot.js"></script>
-  <link rel="stylesheet" href="css/main.css" />
-  <link type="text/css" href="css/css.css" rel="stylesheet" />
-  </head>
-
-  <body>
-    <div id="wrapper"> 
-      <section id="main">
-        <header>
-          <a href=""><span class="avatar"><img src="ball.jpg"></span></a>
-          <a href=""><h1>Barthes Tarot</h1></a>
-          <div id="intro">
-          <p>The necessity for this book is to be found in the following consideration: 
-          that the lover's discourse is today of <emphasis>an extreme solitude</emphasis>.</p>
-          </div>
-          <p><a class="btn" id="button">Get A Reading</a></p>
-        </header>
-        <div>
-          <canvas id="displayCanvas" style='display:none;' width="600px" height="320px">
-            Your browser does not support HTML5 canvas.
-          </canvas>
-          <div id="caption" style='display:none;'>
-            <h1></h1>
-            <p></p>
-            <span class="again"><a href="">again</a></span>
-          </div>
-        </div>
-      </section>
-      <footer id="footer">
-        <ul class="copyright">
-          <li><span class="copyleft">&copy;</span> <a href="https://github.com/ablwr">ablwr</a> | TY and your path to DIY: <a href="https://html5up.net/identity">HTML5</a>, <a href="http://rectangleworld.com/blog/archives/654">RectangleWorld</a>, and <a href="http://www.goodreads.com/book/show/380994.A_Lover_s_Discourse">Roland Barthes</a>.</li>
-        </ul>
-      </footer>
-    </div>
-  </body>
-
 </html>

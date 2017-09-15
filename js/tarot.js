@@ -16,7 +16,7 @@ var tarots = [
   ["The Heart", "coeur", "This word refers to all kinds of movements and desires, but what is constant is that the heart is constituted into a gift-abject-whether ignored or rejected. "],
   ["'All the delights of the earth'", "comblement", "The subject insistently posits the desire and the possibility of a complete satisfaction of the desire implicated in the amorous relation and of a perfect and virtually eternal success of this relation: paradisiac image of the Sovereign Good, to be given and to be received. "],
   ["'I have an Other-ache'", "compassion", "The subject experiences a sentiment of violent compassion with regard to the loved object each time they sees, feels, or knows the loved object is unhappy or in danger, for whatever reason external to the amorous relation itself. "],
-  ["'I want to understand'", "comprendre", "Suddenly perceiving the amorous episode as a knot of inexplicable reasons and impaired solutions, the subject exclaims: 'I want to understand (what is happening to me)!' "], 
+  ["'I want to understand'", "comprendre", "Suddenly perceiving the amorous episode as a knot of inexplicable reasons and impaired solutions, the subject exclaims: 'I want to understand (what is happening to me)!' "],
   ["'What is to be done?'", "conduite", "A deliberative figure: the amorous subject raises (generally) futile problems of behavior: faced with this or that alternative, what is to be done? How is they to act?"],
   ["Connivance", "connivence", "The subject imagines themself speaking about the loved being with a rival person, and this image generates and strangely develops in them a pleasure of complicity. "],
   ["'When my finger accidentally . . .'", "contacts", "The figure refers to any interior discourse provoked by a furtive contact with the body (and more precisely the skin) of the desired being. "],
@@ -83,14 +83,39 @@ var tarots = [
 
 var randomItem = tarots[Math.random() * tarots.length | 0];
 
-$( document ).ready(function() {
-    $('#button').click(function() {
-      $('#button').hide();
-      $('#intro').hide();
-      $('#displayCanvas').fadeIn('slow');
-      $('#displayCanvas').show();
-      $('#caption').fadeIn('slow');
-      $('#caption > h1').append(randomItem[0])
-      $('#caption > p').append(randomItem[1] + ": <br/>" + randomItem[2])
-    });
+function fadeAlong(el) {
+  el.style.opacity = 0
+  el.style.display = ''
+  if (el.classList) {
+    el.classList.add('FadeUpContent')
+  } else {
+    el.className += ' ' + 'FadeUpContent'
+  }
+  var last = +new Date();
+  var tick = function() {
+    el.style.opacity = +el.style.opacity + (new Date() - last) / 400;
+    last = +new Date();
+    if (+el.style.opacity < 1) {
+      (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16);
+    }
+  };
+  tick();
+}
+
+function ready(fn) {
+  if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
+    fn();
+  } else {
+    document.addEventListener('DOMContentLoaded', fn);
+  }
+}
+
+document.getElementById('button').addEventListener('click', function() {
+  document.getElementById('button').style.display = 'none';
+  document.getElementById('intro').style.display = 'none';
+  fadeAlong(document.getElementById('displayCanvas'));
+  document.getElementById('displayCanvas').style.display = '';
+  fadeAlong(document.getElementById('caption'));
+  document.getElementById('caption_title').innerHTML += randomItem[0];
+  document.getElementById('caption_def').innerHTML += (randomItem[1] + ": <br/>" +randomItem[2]);
 });
